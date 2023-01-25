@@ -2,7 +2,7 @@
 
 Minimalist app to recursively watch a directory for changes.
 
-# Installation
+## Installation
 
 ```
 $ cd ~
@@ -20,7 +20,7 @@ $ sudo mv /usr/local/bin/jp-watch /tmp
 $ mv jp-watch /tmp
 ```
 
-# Useage
+## Useage
 
 ```
 $ jp-watch <directory to watch>
@@ -37,7 +37,7 @@ dir/subdir/
 
 Directories always end with a slash.
 
-## Examples
+Examples:
 
 ```
 $ jp-watch .
