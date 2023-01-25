@@ -35,7 +35,7 @@ dir/
 dir/subdir/
 ```
 
-Directories always end with a slash.
+Note that directories will always end with a slash to it's easy to distinguish them from files.
 
 Examples:
 
