@@ -2,6 +2,8 @@
 
 Minimalist app to recursively watch a directory for changes.
 
+Written for ```jp-sync``` because ```fswatch``` and ```inotify``` didn't produce consistent results with directories identified across platforms.
+
 ## Installation
 
 ```
