@@ -1,0 +1,32 @@
+[package]
+name = "jp-watch"
+version = "0.0.0"
+authors = ["Jonathan Pugh <jdspugh@gmail.com>"]
+edition = "2021"
+description = "Minimalist app to watch a directory for changes, reporting the files or directories modified. Consistent results on Linux and MacOS."
+license = "MIT"
+keywords = ["Minimalist","Watch","Linux","MacOS"]
+exclude = ["tmp*",".*"]
+
+[badges]
+maintenance = {status="passively-maintained"}
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[target.'cfg(not(target_os="macos"))'.dependencies]
+inotify = "0.10.0"
+
+[target.'cfg(target_os="macos")'.dependencies]
+fsevent = "2.1.2"
+
+[[bin]]
+name = "jp-watch"
+path = "jp-watch.rs"
+
+[profile.release]
+opt-level = 3       # 0 | 1 | 2 | 3 | "s"(size) | "z"(size)
+debug = 0           # 0/false | 1 | 2
+lto = true          # false | true/"fat" | "thin" | "off"
+codegen-units = 1   # Reduce number of codegen units to increase optimizations
+panic = "abort"     # "abort" | "unwind"
+strip = true        # true | false
