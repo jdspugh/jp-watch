@@ -2,7 +2,11 @@
 
 Minimalist app to recursively watch a directory for changes.
 
-Written for ```jp-sync``` because ```fswatch``` and ```inotify``` didn't produce consistent results with directories identified across platforms.
+Written for ```jp-sync``` because ```fswatch``` and ```inotify-tools``` didn't produce consistent results including directories identified across platforms.
+
+## Limitations
+
+On Linux ```inotify``` is used. Unfortunately ```inotify``` won't watch new files or directories added after the watch has started, unlike the MacOS version which uses ```FSEvents```.
 
 ## Installation
 
