@@ -1,4 +1,4 @@
-# jp-watch
+# jp-watch-rust
 
 Minimalist app to recursively watch a directory for changes.
 
