@@ -1,4 +1,4 @@
-# jp-watch-rust (depricated, use jp-watch-c instead)
+# jp-watch-rust (depricated, use jp-watch instead)
 
 Minimalist app to recursively watch a directory for changes.
 
